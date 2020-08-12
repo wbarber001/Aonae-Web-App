@@ -1,0 +1,168 @@
+/*GENERAL STYLES*/
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  font-size: 3em;
+  text-transform: uppercase;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+}
+
+input:focus {
+  font-family: "Londrina Solid";
+  text-align: center;
+  outline: none;
+}
+
+label {
+  font-family: "Bungee Inline";
+  width: 25%;
+  margin-right: 3%;
+}
+
+label,
+select {
+  font-size: 200%;
+  font-family: "Bungee Inline";
+}
+
+select {
+  margin: 2.5% 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: "Bungee Inline";
+  font-size: 200%;
+  height: fit-content;
+  width: 20%;
+  margin: 5% 37.5%;
+}
+
+header,
+#introduction_div,
+#name,
+#attribute,
+#origin,
+#class {
+  width: 100%;
+  padding: 0 2.5%;
+}
+
+h1 {
+  font-family: "Monoton";
+  font-size: 250%;
+  text-align: center;
+  margin: auto;
+}
+
+h2,
+h3 {
+  font-family: "Bungee Inline";
+}
+
+p {
+  font-family: "Londrina Solid";
+  font-size: 200%;
+  margin: auto;
+}
+
+/*HEADER SECTION*/
+header {
+  width: 100%;
+}
+
+header h2 {
+  text-align: center;
+}
+
+header h1,
+header h2 {
+  height: fit-content;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*INTRODUCTION SECTION*/
+
+/*NAME SECTION*/
+#name_field {
+  width: 100%;
+}
+
+/*ATTRIBUTE SECTION*/
+#attribute_list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.attributes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 18%;
+}
+
+.attributes h3 {
+  font-size: 250%;
+}
+
+.modifiers {
+  font-family: "Bungee Inline";
+  font-size: 325%;
+  width: 50%;
+  margin-bottom: 8%;
+}
+
+/*ORIGIN SECTION*/
+#origin_pick {
+  font-family: "Londrina Solid";
+  font-size: 200%;
+}
+
+/*FOOTER STYLES*/
+
+/*COLOR*/
+h2,
+h3 {
+  color: #7f0000;
+}
+
+#introduction_div,
+#name,
+#attribute,
+#origin,
+#class {
+  border-bottom: 2px solid #d48c24;
+  padding-bottom: 3%;
+}
+
+#name_field {
+  border-bottom: 2px solid #000000;
+}
+
+.attributes,
+.attributes h3,
+.modifiers {
+  border: 1px solid #666666;
+}
+
+.attributes h3 {
+  color: #7f0000;
+}
+
+/*MEDIA QUERIES*/

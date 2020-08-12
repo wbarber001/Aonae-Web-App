@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <title>Aonae Character Builder</title>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Monoton|Bangers|Londrina+Solid|Bungee+Inline"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Header Section-->
+    <header>
+      <h1>AONAE SOUL AND SORCERY</h1>
+      <h2>Character Builder</h2>
+    </header>
+    <!--Introduction Section-->
+    <div id="introduction_div">
+      <h3>Introduction</h3>
+      <p>
+        This app will help you build a player character for the tabletop R.P.G.
+        Aonae Soul and Sorcery. At different steps the app will allow you to
+        either choose from a set of presented options or press a button to
+        randomly choose.
+      </p>
+    </div>
+    <!--Name Section-->
+    <div id="name">
+      <h3>Name</h3>
+      <input type="text" id="name_field" />
+    </div>
+    <!--Attribute Section-->
+    <div id="attribute">
+      <h3>Attributes</h3>
+      <p>
+        Your character has five attributes; Wisdom, Awareness, Soul, Strength
+        and Agility.
+      </p>
+      <p>
+        Click "Roll" to generate modifiers for each of your five attributes.
+      </p>
+      <button name="roll_attributes" id="roll_attributes" type="button">
+        Roll
+      </button>
+      <ul id="attribute_list">
+        <li class="attributes">
+          <h3>WISD</h3>
+          <p class="modifiers" id="wisdom">0</p>
+        </li>
+        <li class="attributes">
+          <h3>AWAR</h3>
+          <p class="modifiers" id="awareness">0</p>
+        </li>
+        <li class="attributes">
+          <h3>SOUL</h3>
+          <p class="modifiers" id="soul">0</p>
+        </li>
+        <li class="attributes">
+          <h3>STREN</h3>
+          <p class="modifiers" id="strength">0</p>
+        </li>
+        <li class="attributes">
+          <h3>AGIL</h3>
+          <p class="modifiers" id="agility">0</p>
+        </li>
+      </ul>
+    </div>
+    <!--Origin Section-->
+    <div id="origin">
+      <h3>Origin</h3>
+      <p>
+        Choose your native culture from the drop down or hit the button below to
+        randomly choose an origin.
+      </p>
+      <label for="origins">Origins</label>
+      <select name="origins" id="select_origin">
+        <option name="select">select</option>
+        <option name="mansa">Mansa Kingdom</option>
+        <option name="tumbutu">Tumbutu City State</option>
+        <option name="tsugoab">Tsugoab Plains</option>
+        <option name="kermo">Kermo City</option>
+        <option name="mero">Mero City</option>
+        <option name="turkhna">Turkhana Plains</option>
+        <option name="mbuti">Mbuti Village</option>
+        <option name="ounsi">Ounsi Forest</option>
+        <option name="olodumare">Olodumare Plains</option>
+        <option name="qertassi">Qertassi Temple</option>
+        <option name="napoto">Napoto City</option>
+        <option name="sebiumeker">Sebiumeker</option>
+      </select>
+      <p>Press the button to randomly generate your character's heritage.</p>
+      <button name="roll_origin" id="roll_origin" type="button">Roll</button>
+      <div id="origin_pick"></div>
+    </div>
+    <!--Class Section-->
+    <div id="class">
+      <h3>Class</h3>
+      <p>
+        Choose your class from the drop down.
+      </p>
+      <label for="classes">Classes</label>
+      <select name="classes">
+        <option name="select">select</option>
+        <option name="archer">Archer</option>
+        <option name="jali">Jali</option>
+        <option name="marabout">Marabout</option>
+        <option name="martial">Martial Artist</option>
+        <option name="nok">Nok</option>
+        <option name="shaman">Shaman</option>
+        <option name="soldier">Soldier</option>
+        <option name="thief">Thief</option>
+      </select>
+    </div>
+    <footer></footer>
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
