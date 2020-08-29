@@ -2,7 +2,7 @@
 body {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 
 input {
@@ -21,20 +21,10 @@ input:focus {
   outline: none;
 }
 
-label {
-  font-family: "Bungee Inline";
-  width: 25%;
-  margin-right: 3%;
-}
-
-label,
 select {
   font-size: 200%;
   font-family: "Bungee Inline";
-}
-
-select {
-  margin: 2.5% 0;
+  margin: 2.5% 4%;
 }
 
 li {
@@ -46,7 +36,12 @@ button {
   font-size: 200%;
   height: fit-content;
   width: 20%;
-  margin: 5% 37.5%;
+  margin: 3%;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 header,
@@ -54,9 +49,22 @@ header,
 #name,
 #attribute,
 #origin,
-#class {
+#job,
+#class,
+#background,
+#derived_stats,
+#ability_list,
+#miracles,
+#items {
   width: 100%;
-  padding: 0 2.5%;
+}
+
+#background h3,
+#derived_stats h3,
+#ability_list h3,
+#miracles h3,
+#items h3 {
+  font-size: 300%;
 }
 
 h1 {
@@ -69,12 +77,47 @@ h1 {
 h2,
 h3 {
   font-family: "Bungee Inline";
+  margin: auto;
+  width: 90%;
 }
 
 p {
   font-family: "Londrina Solid";
   font-size: 200%;
+  width: 90%;
   margin: auto;
+}
+
+#origin_pick,
+#job_pick,
+#class_pick,
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.stats_ul {
+  font-family: "Londrina Solid";
+  font-size: 230%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2% auto;
+  padding: 1.5% 0;
+  height: fit-content;
+  width: 100%;
+}
+
+.wrapper {
+  font-family: "Londrina Solid";
+  font-size: 230%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.stats_li {
+  margin-bottom: 2.5%;
 }
 
 /*HEADER SECTION*/
@@ -94,8 +137,6 @@ header h2 {
   padding: 0;
 }
 
-/*INTRODUCTION SECTION*/
-
 /*NAME SECTION*/
 #name_field {
   width: 100%;
@@ -105,6 +146,7 @@ header h2 {
 #attribute_list {
   display: flex;
   flex-direction: row;
+  margin: auto;
   width: 100%;
   padding: 0;
   justify-content: space-around;
@@ -119,6 +161,7 @@ header h2 {
 
 .attributes h3 {
   font-size: 250%;
+  width: 100%;
 }
 
 .modifiers {
@@ -127,13 +170,36 @@ header h2 {
   width: 50%;
   margin-bottom: 8%;
 }
-
-/*ORIGIN SECTION*/
-#origin_pick {
-  font-family: "Londrina Solid";
-  font-size: 200%;
+/*CLASS BACKGROUND SECTION*/
+.wrapper .stats_ul {
+  font-size: 120%;
+  width: 90%;
+  border: 1px solid green;
 }
 
+.wrapper .stats_ul .stats_li {
+  text-align: center;
+}
+
+/*ABILITIES SECTION*/
+#ability_wrapper ul {
+  font-size: 150%;
+}
+
+#miracles .wrapper {
+  width: 90%;
+  margin: 2.5% auto;
+}
+
+#miracles .info {
+  font-size: 130%;
+}
+
+#miracles button {
+  font-size: 100%;
+  width: fit-content;
+  margin: 2% auto;
+}
 /*FOOTER STYLES*/
 
 /*COLOR*/
@@ -142,11 +208,16 @@ h3 {
   color: #7f0000;
 }
 
-#introduction_div,
 #name,
 #attribute,
 #origin,
-#class {
+#job,
+#class,
+#background,
+#derived_stats,
+#ability_list,
+#miracles,
+#items {
   border-bottom: 2px solid #d48c24;
   padding-bottom: 3%;
 }
@@ -156,13 +227,22 @@ h3 {
 }
 
 .attributes,
-.attributes h3,
 .modifiers {
   border: 1px solid #666666;
 }
 
 .attributes h3 {
   color: #7f0000;
+}
+
+#origin_pick,
+#job_pick,
+#class_pick {
+  border: 1px solid #7f0000;
+}
+
+#miracles .wrapper {
+  border: 1px solid #d48c24;
 }
 
 /*MEDIA QUERIES*/

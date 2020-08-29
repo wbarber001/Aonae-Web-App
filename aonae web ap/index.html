@@ -21,7 +21,7 @@
         This app will help you build a player character for the tabletop R.P.G.
         Aonae Soul and Sorcery. At different steps the app will allow you to
         either choose from a set of presented options or press a button to
-        randomly choose.
+        randomly have a random choice made for you.
       </p>
     </div>
     <!--Name Section-->
@@ -32,84 +32,173 @@
     <!--Attribute Section-->
     <div id="attribute">
       <h3>Attributes</h3>
-      <p>
-        Your character has five attributes; Wisdom, Awareness, Soul, Strength
-        and Agility.
-      </p>
-      <p>
-        Click "Roll" to generate modifiers for each of your five attributes.
-      </p>
-      <button name="roll_attributes" id="roll_attributes" type="button">
-        Roll
-      </button>
-      <ul id="attribute_list">
-        <li class="attributes">
-          <h3>WISD</h3>
-          <p class="modifiers" id="wisdom">0</p>
-        </li>
-        <li class="attributes">
-          <h3>AWAR</h3>
-          <p class="modifiers" id="awareness">0</p>
-        </li>
-        <li class="attributes">
-          <h3>SOUL</h3>
-          <p class="modifiers" id="soul">0</p>
-        </li>
-        <li class="attributes">
-          <h3>STREN</h3>
-          <p class="modifiers" id="strength">0</p>
-        </li>
-        <li class="attributes">
-          <h3>AGIL</h3>
-          <p class="modifiers" id="agility">0</p>
-        </li>
-      </ul>
+      <div id="step_one">
+        <p>
+          Your character has five attributes; <br>
+           Wisdom, Awareness, Soul, Strength and Agility.
+        </p><br>
+        <!-- <label for="attribute_explanations">Attribute Descriptions</label> -->
+        <select name="attribute_decriptions" id="select_attribute">
+          <option>Attribute Descriptions</option>
+          <option>wisdom</option>
+          <option>awareness</option>
+          <option>soul</option>
+          <option>strength</option>
+          <option>agility</option>
+        </select>
+        <div id="attribute_decription"></div>
+        <p>
+          Click "Roll" to generate modifiers for each of your five attributes. Once you have a roll you like you'll need to press confirm to lock in your result.
+        </p>
+      </div>
+      <div class="button_wrapper" id="attribute_buttons">
+        <button name="roll_attributes" id="roll_attributes" type="button">
+          Roll
+        </button>
+        <button name="confirm_attributes" id="confirm_attributes" type="button">
+          Confirm
+        </button>
+      </div>
+    </div>
+    <ul id="attribute_list">
+      <li class="attributes">
+        <h3>WIS</h3>
+        <p class="modifiers" id="wisdom">0</p>
+      </li>
+      <li class="attributes">
+        <h3>AWA</h3>
+        <p class="modifiers" id="awareness">0</p>
+      </li>
+      <li class="attributes">
+        <h3>SOU</h3>
+        <p class="modifiers" id="soul">0</p>
+      </li>
+      <li class="attributes">
+        <h3>STR</h3>
+        <p class="modifiers" id="strength">0</p>
+      </li>
+      <li class="attributes">
+        <h3>AGI</h3>
+        <p class="modifiers" id="agility">0</p>
+      </li>
+    </ul>
     </div>
     <!--Origin Section-->
     <div id="origin">
       <h3>Origin</h3>
-      <p>
-        Choose your native culture from the drop down or hit the button below to
-        randomly choose an origin.
-      </p>
-      <label for="origins">Origins</label>
-      <select name="origins" id="select_origin">
-        <option name="select">select</option>
-        <option name="mansa">Mansa Kingdom</option>
-        <option name="tumbutu">Tumbutu City State</option>
-        <option name="tsugoab">Tsugoab Plains</option>
-        <option name="kermo">Kermo City</option>
-        <option name="mero">Mero City</option>
-        <option name="turkhna">Turkhana Plains</option>
-        <option name="mbuti">Mbuti Village</option>
-        <option name="ounsi">Ounsi Forest</option>
-        <option name="olodumare">Olodumare Plains</option>
-        <option name="qertassi">Qertassi Temple</option>
-        <option name="napoto">Napoto City</option>
-        <option name="sebiumeker">Sebiumeker</option>
-      </select>
-      <p>Press the button to randomly generate your character's heritage.</p>
-      <button name="roll_origin" id="roll_origin" type="button">Roll</button>
+      <div id="step_two">
+        <p>
+          Now you need to scroll through the Origin drop down and choose your character's culture of origin. Press confirm to lock in your choice. Can't decide? Press "Roll" and a random culture will be chosen for you.
+        </p>
+      </div>
+      <div id="origin_controls">
+        <select name="origins" id="select_origin">
+          <option>Origins</option>
+          <option>Mansa Kingdom</option>
+          <option>Tumbutu City State</option>
+          <option>Tsugoab Plains</option>
+          <option>Kermo City</option>
+          <option>Mero City</option>
+          <option>Turkhana Plains</option>
+          <option>Mbuti Village</option>
+          <option>Ounsi Forest</option>
+          <option>Olodumare Plains</option>
+          <option>Qertassi Temple</option>
+          <option>Napoto City</option>
+          <option>Sebiumeker</option>
+        </select>
+        <p>Press "Roll" to have an Origin randomly chosen for you.</p>
+        <div class="button_wrapper">
+          <button name="roll_origin" id="roll_origin" type="button">Roll</button>
+          <button name="confirm_origin" id="confirm_origin" type="button">Confirm</button>
+        </div>
+      </div>
       <div id="origin_pick"></div>
+    </div>
+    <!--Job Section-->
+    <div id="job">
+      <h3>Job</h3>
+      <div id="step_three">
+        <p>
+          Scroll through the job drop down to determine how your character makes a living. Press confirm when you've found your choice. Can't decide? Press "Roll" and a random job will be chosen for you.
+        </p>
+      </div>
+      <div id="job_controls">
+        <select name="jobs" id="select_job">
+          <option>Jobs</option>
+          <option>Apothecary</option>
+          <option>Artisan</option>
+          <option>Bandit</option>
+          <option>Blacksmith</option>
+          <option>Boxer</option>
+          <option>Chandler</option>
+          <option>Cobbler</option>
+          <option>Healer</option>
+          <option>Hunter</option>
+          <option>Mason</option>
+          <option>Mercenary</option>
+          <option>Merchant</option>
+          <option>Miner</option>
+          <option>Pathfinder</option>
+          <option>Prophet</option>
+          <option>Sailor</option>
+          <option>Scribe</option>
+          <option>Slayer</option>
+        </select>
+        <p>Press the "Roll" button to randomly generate your character's job.</p>
+        <div class="button_wrapper">
+          <button name="roll_job" id="roll_job" type="button">Roll</button>
+          <button name="confirm_job" id="confirm_job" type="button">Confirm</button>
+        </div>
+      </div>
+      <div id="job_pick"></div>
     </div>
     <!--Class Section-->
     <div id="class">
       <h3>Class</h3>
-      <p>
-        Choose your class from the drop down.
-      </p>
-      <label for="classes">Classes</label>
-      <select name="classes">
-        <option name="select">select</option>
-        <option name="archer">Archer</option>
-        <option name="jali">Jali</option>
-        <option name="marabout">Marabout</option>
-        <option name="martial">Martial Artist</option>
-        <option name="nok">Nok</option>
-        <option name="shaman">Shaman</option>
-        <option name="soldier">Soldier</option>
-        <option name="thief">Thief</option>
-      </select>
+      <div id="step_four">
+        <p>
+          Choose your class from the drop down.
+        </p>
+      </div>
+      <div id="class_controls">
+        <select name="classes" id="select_class">
+          <option>Classes</option>
+          <option>Archer</option>
+          <option>Jali</option>
+          <option>Marabout</option>
+          <option>Martial Artist</option>
+          <option>Nok</option>
+          <option>Shaman</option>
+          <option>Soldier</option>
+          <option>Thief</option>
+        </select>
+        <div class="button_wrapper">
+          <button name="confirm_class" id="confirm_class" type="button">Confirm</button>
+        </div>
+      </div>
+      <div id="class_pick"></div>
+    </div>
+    <div id="background">
+      <h3>Class and Background</h3>
+      <div id="bg_wrapper" class="wrapper"></div>
+    </div>
+    <div id="derived_stats">
+      <h3>Stats</h3>
+      <div id="stat_wrapper" class="wrapper"></div>
+    </div>
+    <div id="ability_list">
+      <h3>Abilities</h3>
+      <div id="ability_wrapper" class="wrapper"></div>
+    </div>
+    <div id="miracles">
+      <h3>Miracles</h3>
+      <p>Now choose two miracles you can perform at level 1.</p>
+      <div id="miracle_wrapper" class="wrapper"></div>
+    </div>
+    <div id="items">
+      <h3>Items</h3>
+      <div id="item_wrapper" class="wrapper"></div>
     </div>
     <footer></footer>
     <script src="js/script.js"></script>
